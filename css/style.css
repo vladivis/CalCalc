@@ -1,0 +1,202 @@
+@font-face {
+  font-family: 'PT';
+  src: url('../fonts/pt-sans-caption-bold.woff2') format('woff2'),
+       url('../fonts/pt-sans-caption-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT';
+  src: url('../fonts/pt-sans-caption-regular.woff2') format('woff2'),
+       url('../fonts/pt-sans-caption-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+fieldset, p {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  background-color: #ffd97a;
+  font-family: PT;
+}
+
+.main {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+form {
+  background: white;
+  border-radius: 16px;
+  padding: 5px 20px 20px;
+}
+
+.gender {
+  display: flex;
+}
+
+.gender input[type="radio"] {
+  display: none;
+}
+
+.gender li {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.gender input[type="radio"] + label {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid orange;
+  padding: 5px;
+  display: inline-block;
+}
+
+.gender input[type="radio"]:checked + label {
+  width: 100%;
+  background-color: orange;
+  color: #fff;
+}
+
+.params__container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+}
+
+.params__item {
+  display: flex;
+  flex-direction: column;
+  width: 65px;
+}
+
+.params__item input {
+  width: 50px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.params__text {
+  display: flex;
+  align-items: baseline;
+}
+
+.params__text span {
+  margin-left: 5px;
+  color: gray;
+  font-size: 12px;
+}
+
+.phys__item {
+  font-size: 'PT';
+  margin-bottom: 20px;
+}
+
+.phys__item label {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.phys__item p {
+  margin-top: 4px;
+  margin-left: 27px;
+  color: gray;
+  font-size: 14px;
+}
+
+.phys__item input[type='radio'],
+label {
+  cursor: pointer;
+}
+
+.phys__item input[type='radio'] {
+  position: relative;
+  height: 12px;
+  width: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.phys__item input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid orange;
+}
+
+.phys__item input[type='radio']:checked + label {
+  color: orange;
+}
+
+.phys__item input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: orange;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
+.submit, .reset {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.submit {
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  color: white;
+  padding: 10px;
+  margin-right: 30px;
+}
+
+.reset {
+  position: relative;
+}
+
+.reset::before {
+  content: '';
+  z-index: 10;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url('../img/icon-cross.svg');
+  background-size: cover;
+  width: 14px;
+  height: 14px;
+}
